@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>matricular</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="..//css/estilos.css">
+    </head>
+    <body>
+        <header>
+			<h1>SGEV</h1>
+			<p>Sistema Gestor Educativo Virtual</p>
+		</header>
+		<nav>
+			<a href="">Inicio</a>
+			<a href="">Acerca de Nosotros</a>
+			<a href="">Contáctenos</a>
+			<a href="">Programas</a>
+			<a href="">Servicios</a>
+		</nav>
+		<aside>
+			<h3>Matriculando</h3>
+			<img src="..//img/laboratorio.jpg" height="50px">
+		</aside>
+        <section>
+        <form name="matricular" action="matriculaacademica.html" method="post">
+            <table>
+                <tr><th>Código</th>
+                    <th>Asignatura</th>
+                    <th>Créditos</th>
+                    <th>Grupo</th>
+                </tr>
+                <tr><td>304131</td>
+                    <td><input type="radio" name="materias" value="Álgebra Lineal">Álgebra Lineal</td>
+                    <td>3</td>
+                    <td><select name="grupo">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select></td>
+                </tr>
+                <tr><td>701122</td>
+                    <td><input type="radio" name="materias" value="Algoritmia y Programación">Algoritmia y Programación</td>
+                    <td>4</td>
+                    <td><select name="grupo">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select></td>
+                </tr>
+                <tr><td>304127</td>
+                    <td><input type="radio" name="materias" value="Cálculo Diferencial"> Cálculo Diferencial</td>
+                    <td>4</td>
+                    <td>  
+                        <select name="grupo">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td>204224</td>
+                    <td><input type="radio" name="materias" value="Competencia comunicativa">Competencia Comunicativa</td>
+                    <td>2</td>
+                    <td><select name="grupo">
+                        <option value="1">1</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select></td>
+                </tr>
+                <tr><td>701121</td>
+                    <td><input type="radio" name="materias" value="Introducción a la Ingeniería de Sistemas">Introducción a la Ingeniería de Sistemas</td>
+                    <td>3</td>
+                    <td><select name="grupo">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select></td>
+                </tr>
+            </table>
+            <button type="submit">Finalizar Matrícula</button>
+        </form>
+        <button>Matricular</button>
+        <button>Ver horario</button>
+        </section>
+        <footer>Instintución XYZ 2024</footer>
+    </body>
+</html>

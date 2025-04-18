@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+    <link rel="stylesheet" type="text/css" href="../css/material_styles.css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
+    <link rel="stylesheet" href="../css/forms_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tarea</h1>
+        <h2 id="h2">[Nombre Tarea]</h2>
+    </header>
+    <nav class="nav nav--color">
+        <ul class="nav__list">
+            <li class="nav--item"><a href="portal_asignatura.html" class="nav_link">Regresar</a></li>
+            <li class="nav--item"><a href="../index.html" class="nav_link">Salir</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section class="intro">
+            <p>¡Cordial saludo, estimados estudiantes!</p>
+            <p>A continuación se facilita el espacio para que adjunten la respectiva tarea. También se encuentra el doumento con las instrucciones de la tarea</p>
+        </section>
+        <section class="section_container intro">
+            <h2>Indicaciones</h2>
+            <div class="material">
+                <img src="../img/pdf-icon.png" alt="Icono de PDF">
+                <a href="../downloads/Guia_Aprendizaje_06_Fase_3_Ejecución_AP06_Adaptada.pdf" target="_blank">Descripción de la Tarea</a>
+            </div>
+        </section>
+        <section class="intro">
+            <h2>Envio de Tarea</h2>
+            <form action="portal_asignatura.html" name="tarea" method="post">
+                <div class="div_input">
+                    <label for="observaciones"><h4>Observaciones</h4> </label>
+                    <textarea maxlength="200" id="observaciones" placeholder="Escriba aquí las observaciones. Recuerde, solo tiene 200 caracteres. En el botón de abajo puede adjuntar varios archivos al tiempo" class=""></textarea>
+                </div>
+                <div class="div_input">
+                    <input type="file" multiple accept="image/*" required>
+                    <input type="submit" value="Enviar" name="enviar" class="nav_link boton--envio">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

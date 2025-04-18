@@ -1,0 +1,125 @@
+
+button{
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: skyblue;
+    box-shadow: 0 0 5 px skyblue,
+                0 0 25px skyblue;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+input{
+    font-size: 15px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(185, 231, 249);
+    transition: all 0.4s ease;;
+}
+table{
+    border: none;
+    justify-content: left;
+    width: auto;
+    margin:auto;
+}
+td{
+    text-align: left;
+    padding: 5px;
+    vertical-align: middle;
+    border: none;
+    background-color: azure;
+}
+th {
+    background-color: skyblue;
+    border: 1 px;
+    border-color: blue;;
+}
+nav{
+    background-color:green;
+    color: azure;
+    text-align: center;
+    padding: 1em 0;
+}
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+section{
+    color: black;
+    float: center;
+    width: 70%;
+    height: auto;
+    gap: 15 px;
+    padding: 15px;
+}
+aside{
+    background-color: azure;
+    float: right;
+    width: 25%;
+}
+
+.estilo1{ /*aside izquierda*/
+    background-color: azure;
+    float: left;
+    width: 25%;
+}
+
+aside img {
+    height: auto;
+    display: grid;
+    width: 100%;
+
+}
+
+aside form{
+    height: auto; 
+    display: grid;
+    width: 100%;
+}
+
+header{
+    background-color:white;
+    text-align: center;
+    padding: 1em 0;
+}
+footer{
+    background-color: green;
+    padding: 1em 0;
+    color: white;
+    margin-top: 10px;
+    clear: both;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.estilo2{
+    text-align: justify;
+    font-size: 12 pt;
+    font-style: normal;
+}
+form{
+    display:flexbox;
+    align-content: left;
+    text-align: center;
+    flex-direction: column;
+}
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.boton:hover {
+    background-color: darkblue;
+}
+

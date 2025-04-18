@@ -1,0 +1,40 @@
+
+input, textarea{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 12px;
+}
+
+textarea{
+    resize: none;
+    height: 20vh;
+}
+
+form{
+    background-color: #90caf9;
+    border-radius: 5px;
+    margin:auto;
+    margin-bottom: 50px;
+}
+
+.div_input{
+    padding: 6px 12px;
+}
+.mod--radio{
+    display: block;
+}
+.boton--envio{
+    background-color: #007bff;
+}
+
+form h1{
+    text-align:center;
+}
+
+.form_examen{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 900px;
+}
+h4{margin-bottom:5px;text-align: center;}

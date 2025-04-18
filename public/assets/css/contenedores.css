@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin:auto;
+    margin:0;
+}
+ul,li{
+    margin:0;
+    padding:0;
+}
+body{
+    min-width: 170px;
+    background-color:rgba(17, 17, 17, 0.2);
+}
+.main_container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 170px;
+    background-color: aliceblue;
+    color:whitesmoke;
+    container-type: inline-size;
+    container-name: main_container;
+}
+
+.div__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width:1980px;
+    margin: 0;
+    height: auto;
+    min-height: 90vh;
+    gap:5px;
+}
+.curso--contenido{
+    display:grid;
+    width: 100%;
+    height: auto;
+    background-image:linear-gradient(#0009,#0009), url(../img/lineas_mate.jpg);
+    background-position: center;
+    background-size: cover;
+    place-content:center;
+}
+.curso--contenido:hover{
+    opacity: 0.75;
+    border: 2px solid rgba(250, 250, 250, 0.9);
+}
+
+@container main_container (min-width:600px){
+    .div__container{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+}
+
+h2 a{
+    text-decoration: none;
+    color:aliceblue;
+    margin:0;
+}
+
+.mat_link{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.mod--curso{
+    background-image: none;
+    background-color: #eeeeee;
+    opacity: 0.9;
+    margin:2px;
+}

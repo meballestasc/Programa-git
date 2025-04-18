@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario Examen</title>
+        <link rel="stylesheet" href="../css/material_styles.css">
+        <link rel="stylesheet" href="../css/formulario_examen.css">
+    </head>
+    <body>
+        <div class="main">
+            <form action="portal_asignatura" method="post" class="form_examen">
+                <h1>Examen de [Asignatura]</h1>
+                <p>A continuación encontrarán una serie de preguntas o enunciados, a la cual usted responderá escongiendo una de las opciones (opción múltiple con única respuesa)</p>
+                <ol>
+                    <fieldset><legend>Pregunta 1</legend>
+                        <li>La derivada de una constante es igual a:</li>
+                        <div class="div_input mod--radio">
+                            <input type="radio" name="pregunta1" id="cero" value="0"><label for="cero">0</label>
+                        </div>
+                        <div class="div_input mod--radio">
+                            <input type="radio"name="pregunta1" id="constante" value="La misma constante"><label for="constante">La misma constante</label>
+                        </div>
+                        <div class="div_input mod--radio">
+                            <input type="radio" name="pregunta1" id="uno" value="1"><label for="uno">1</label></div>
+                        <div>
+                            <input type="radio" name="pregunta1" id="nada" value="No se puede"><label for="nada">No se puede derivar</label>
+                        </div>
+                    </fieldset>
+                    <fieldset><legend>Preunta 2</legend>
+                        <li>Sea <code>F(x)=e</code>, determinar su derivada</li>
+                        <div>
+                            <input type="radio" name="pregunta2" id="e"><label for="e">e</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta2" id="uno_p2"><label for="uno_p2">1</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta2" id="cero_p2"><label for="cero_p2">0</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta2" id="eulerinverso"><label for="eulerinverso"><code>-e<sup>-1</sup></code></label>
+                        </div>
+                    </fieldset>
+                    <fieldset><legend>Pregunta 3</legend>
+                        <li>Sea <code>F(x)=e<sup>x</sup></code>, determinar su derivada</li>
+                        <div>
+                            <input type="radio" name="pregunta3" id="op1_p3"><label for="op1_p3"><code>xe<sup>x-1</sup></code></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta3" id="op2_p3"><label for="op2_p3"><code>xe<sup>x</sup></code></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta3" id="op3_p3"><label for="op3_p3"><code>e<sup>x</sup></code></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta3" id="op4_p4">
+                            <label for="op4_p4"><code>(e<sup>x+1</sup>)/x+1</code></label>
+                        </div>
+                    </fieldset>
+                    <fieldset><legend>Pregunta 4</legend>
+                        <li>
+                            Sea <code>F(x)=Seno(x<sup>3</sup>)</code>, determinar su derivada
+                        </li>
+                        <div>
+                            <input type="radio" name="pregunta4" id="o1_p4"><label for="o2_p4"><code>Cos(x<sup>3</sup>)</code></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta4" id="o2_p4"><label for="o2_p4"><code>3xCos(x<sup>3</sup>)</code></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta4" id="o3_p4"><label for="o3-p4"><code>3Seno(x<sup>2</sup>)Cos(x<sup>3</sup>)</code></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta4" id="o4_p4"><label for="o4_p4"><code>3x<sup>2</sup>Cos(x<sup>3</sup>)</code></label>
+                        </div>
+                    </fieldset>
+                    <fieldset> <legend>Pregunta 5</legend>
+                        <li>Sea <code>F(x)=Sec(tan(x))</code>, determinar su derviada</li>
+                    <div>
+                        <input type="radio" name="pregunta5" id="o1_p5"><label for="o1_p5"><code>Sec(tan(x))tan(tan(x))</code></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pregunta5" id="o2_p5"><label for="o2_p5"><code>Sec(tan(x))Tan(tan(x))Sec<sup>2</sup>(x)</code></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pregunta5" id="o3_p5"><label for="o3_p5"><code>tan<sup>2</sup>(Sec(tan(x))</code></label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pregunta5" id="o4_p5"><label for="o4_p5"></label><code>Sec<sup>2</sup>(tan(x))</code>
+                    </div>
+                    </fieldset>
+                </ol>
+                <input type="submit" value="Enviar" name="enviar" class="boton_envio">
+            </form>
+        </div>
+    </body>
+</html>

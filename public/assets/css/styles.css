@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.header2 {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.publicaciones {
+    flex: 2;
+    container-type: inline-size;
+    container-name: publicaciones;
+}
+
+.publicacion {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.publicacion h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.proximas-fechas {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.proximas-fechas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.proximas-fechas li {
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.boton:hover {
+    background-color: darkblue;
+}
+
+@media screen and (min-width:520px){
+    .boton{
+        background-color: transparent;
+    } 
+    
+}
+
+@media screen and (max-width:520px){
+    .main-content{
+        flex-direction: column;
+    }
+}
+
+
+
+@container publicaciones (min-width:500px){
+    .publicacion{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        border:2px solid lightgray;
+    }
+    .h3_grid:first-child{
+        grid-column: span 2;
+    }
+}
