@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 throw new PDOException('Error al registrar estudiante.');
             }
         } else {
-            $profesor = new Profesor($id, $_POST['tipo_doc'], $_POST['num_id'], $_POST['escalafon'], $_POST['fecha_ingreso'] $_POST['especialidad']);
+            $profesor = new Profesor($id, $_POST['tipo_doc'], $_POST['num_id'], $_POST['escalafon'], $_POST['fecha_ingreso'], $_POST['especialidad']);
             if (!$profesor->guardar()) {
                 throw new PDOException('Error al registrar profesor.');
             }

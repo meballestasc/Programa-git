@@ -11,18 +11,18 @@ class Conexion
 {
     private PDO $conexion;
     
-    $config = require __DIR__ . '/../../config/database.php';
+    //$config = require __DIR__ . '/../../config/database.php';
     public function __construct()
     {
         try {
-            $dsn = "mysql:host={$config['host']};dbname={$config['dbname']};charset=utf8";
+            $dsn = "mysql:host=$this->host;dbname=$this->dbname;charset=utf8mb4";
             $this->conexion = new PDO(
-                $dsn,
+                /*$dsn,
                 $config['user'],
-                $config['password'],
-                /*'mysql:host=localhost;dbname=SER;charset=utf8',
+                $config['password'],*/
+                'mysql:host=localhost;dbname=SER;charset=utf8',
                 'root',
-                '',*/  //Este sería el código necesario sin archivo de configuración ni propiedades de clase
+                '',//Este sería el código necesario sin archivo de configuración ni propiedades de clase
                 [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
