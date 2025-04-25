@@ -6,24 +6,23 @@
         <link rel="stylesheet" type="text/css" href="..//css/estilos.css">
     </head>
     <body>
-        <form name="registro" method="post" action="inicio.html">
-            <select name="tipodedocumento">
+        <form name="registro" method="post" action="../../../src/Controller/Registrar_Usuario.php">
+            <select name="tipo_doc">
                 <option value="Cédula">Cédula de Ciudadanía Colombiana</option>
                 <option value="TI">Tarjeta de Identidad</option>
                 <option value="Pasaporte">Pasaporte</option>
                 <option value="CE">Cédula de extranjería</option>
             </select><br>
-            Número de Identificación:<br> <input type="text" name="NoId" maxlength="15" required><br>
-            Nombres:<br>    <input type="text" name="Nombres" maxlength="30" required><br>
-            Apellidos:<br>  <input type="text" name="Apellidos" maxlength="30" required><br>
-            E-mail:<br>   <input type="text" name="e-mail"    maxlength="50"><br>
+            Número de Identificación:<br> <input type="text" name="num_id" maxlength="15" required><br>
+            Nombres:<br>    <input type="text" name="nombres" maxlength="30" required><br>
+            Apellidos:<br>  <input type="text" name="apellidos" maxlength="30" required><br>
+            E-mail:<br>   <input type="text" name="e_mail"    maxlength="50"><br>
             Fecha de Nacimiento: <br><input type="date" name="fecha de nacimiento"><br>
-            Contraseña:<br> <input type="text" name="contrasenia1" maxlength="30" required><br>
-            Sexo:<br> Masculino<INPUT TYPE="RADIO" NAME="sexo" VALUE="HOMBRE">
-                Femenino<INPUT TYPE="RADIO" NAME="sexo" VALUE="MUJER"><BR>
+            Contraseña:<br> <input type="password" name="contraseña" maxlength="30" required><br>
+            Sexo:<br> Masculino<INPUT TYPE="RADIO" NAME="género" VALUE="Masculino">
+                Femenino<INPUT TYPE="RADIO" NAME="género" VALUE="Femenino"><BR>
             <input type="submit" name="aceptar" value="Registrar">
             <input type="reset" value="Restablecer" name="Borrar">
-
         </form>    
     </body>
 </html>

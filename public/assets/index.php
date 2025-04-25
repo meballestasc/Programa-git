@@ -1,3 +1,6 @@
+<?php 
+	require_once __DIR__ . '/../autoload.php';
+?>
 <html>
 	<head>
 		<tittle>Institución Educativa XYZ</tittle>
