@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace Controllers;
 
-use App\Models\Usuario;
+use Models\Usuario;
 use Exception;
 
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
-        $usuario = Usuario::autenticar($_POST['e_mail'], $_POST['contraseña']);
+        $usuario = Usuario::autenticar($_POST['e_mail'], $_POST['password']);
         if ($usuario) {
             $_SESSION['id'] = $usuario->id;
             $_SESSION['tipo'] = $usuario->tipo;
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
 
-        throw new Exception("e_mail o contraseña incorrectos.");
+        throw new Exception("e_mail o password incorrectos.");
     } catch (Exception $e) {
         echo $e->getMessage();
     }

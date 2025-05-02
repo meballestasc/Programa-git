@@ -1,12 +1,18 @@
-<html>
+<html lang="es">
     <head>
         <title>
             Registro de usuarios
         </title>
         <link rel="stylesheet" type="text/css" href="..//css/estilos.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form name="registro" method="post" action="../../../src/Controller/Registrar_Usuario.php">
+        <form name="registro" method="post" action="../src/Controllers/Registrar_Usuario.php">
+            Tipo Usuario <br>
+            <select name="tipo">
+                <option value="Estudiante">Estudiante</option>
+            </select><br>
             <select name="tipo_doc">
                 <option value="Cédula">Cédula de Ciudadanía Colombiana</option>
                 <option value="TI">Tarjeta de Identidad</option>
@@ -17,10 +23,11 @@
             Nombres:<br>    <input type="text" name="nombres" maxlength="30" required><br>
             Apellidos:<br>  <input type="text" name="apellidos" maxlength="30" required><br>
             E-mail:<br>   <input type="text" name="e_mail"    maxlength="50"><br>
-            Fecha de Nacimiento: <br><input type="date" name="fecha de nacimiento"><br>
-            Contraseña:<br> <input type="password" name="contraseña" maxlength="30" required><br>
-            Sexo:<br> Masculino<INPUT TYPE="RADIO" NAME="género" VALUE="Masculino">
-                Femenino<INPUT TYPE="RADIO" NAME="género" VALUE="Femenino"><BR>
+            <!--Fecha de Nacimiento: <br><input type="date" name="fecha de nacimiento"><br>-->
+            password:<br> <input type="password" name="password" maxlength="30" minlength="8" required><br>
+            Sexo:<br> Masculino<INPUT TYPE="RADIO" NAME="gender" VALUE="Masculino">
+                Femenino<INPUT TYPE="RADIO" NAME="gender" VALUE="Femenino"><BR>
+                No binario<INPUT TYPE="RADIO" NAME="gender" VALUE="Femenino"><BR>
             <input type="submit" name="aceptar" value="Registrar">
             <input type="reset" value="Restablecer" name="Borrar">
         </form>    

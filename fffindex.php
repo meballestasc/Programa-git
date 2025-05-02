@@ -1,9 +1,9 @@
 <?php 
-	require_once __DIR__ . '/../../autoload.php';
+	require_once realpath(__DIR__ . '/autoload.php');
 ?>
 <html>
 	<head>
-		<tittle>Institución Educativa XYZ</tittle>
+		<title>Institución Educativa XYZ</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="with=device-with, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
@@ -35,7 +35,7 @@
                 <option value="CE">Cédula de extranjería</option>
             </select><br><br>
 			Número de Identificación<br> <input type="text" name="NoId" maxlength="15"><br><br>
-			Contraseña<br> <input type="password" name="contrasenia1" maxlength="30"><br>
+			password<br> <input type="password" name="contrasenia1" maxlength="30"><br>
 			<input type="submit" name="iniciosesion" value="Ingreso Estudiantes" class="boton"><br><br>
 			<a href=".//pages/inicio_profesor.html" class="boton">Ingreso Docentes</a>
 			<center><a href="pages/registro.html">Registrarse</a><br></center>

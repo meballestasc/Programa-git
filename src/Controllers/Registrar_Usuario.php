@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
-
-use App\Database\Conexion;
+namespace Controllers;
+require_once realpath(__DIR__ . '/../../autoload.php');
+use Database\Conexion;
 use PDO;
 use PDOException;
-use App\Models\Usuario;
-use App\Models\Estudiante;
-use App\Models\Profesor;
+use Models\Usuario;
+use Models\Estudiante;
+use Models\Profesor;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conexion = (new Conexion())->getConexion();
@@ -19,18 +19,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $conexion->beginTransaction();
 
         // Crear usuario
-        $usuario = new Usuario($_POST['e_mail'], $_POST['contraseña'], $_POST['tipo'],$_POST['nombres'], $_POST['apellidos'], $_POST['género']);
-        if (!$usuario->guardar()) {
+        $usuario = new Usuario(
+            $_POST['e_mail'],
+            $_POST['password'],
+            $_POST['tipo'],
+            $_POST['nombres'],
+            $_POST['apellidos'],
+            $_POST['gender']);
+        $idUsuario=$usuario->guardar();//arreglo del usuario registrado en base de datos
+        if ($idUsuario===0) {
             throw new PDOException('Error al registrar usuario.');
         }
-
-        $id = $conexion->lastInsertId();
-
-        // Crear estudiante o profesor según el tipo
-        if ($_POST['tipo'] === 'estudiante') {
-            $estudiante = new Estudiante($id, $_POST['tipo_doc'], $_POST['num_id']);
-            if (!$estudiante->guardar()) {
+        echo "enviado último id" . $idUsuario;
+        if ($_POST['tipo'] === 'Estudiante') {
+            $estudiante = new Estudiante(
+                $_POST['e_mail'],
+                $_POST['nombres'],
+                $_POST['apellidos'],
+                $_POST['gender'],
+                $idUsuario,
+                $_POST['tipo_doc'],
+                $_POST['num_id']);
+            if (!$estudiante->guardarEstudiante()) {
                 throw new PDOException('Error al registrar estudiante.');
+                $conexion->rollBack();
             }
         } else {
             $profesor = new Profesor($id, $_POST['tipo_doc'], $_POST['num_id'], $_POST['escalafon'], $_POST['fecha_ingreso'], $_POST['especialidad']);

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Models;
-
-use App\Database\Conexion;
+namespace Models;
+require_once realpath(__DIR__ . '/../../autoload.php');
+use Database\Conexion;
 use PDO;
 use DateTime;
 
@@ -16,13 +16,13 @@ class Profesor extends Usuario
     private DateTime $fecha_ingreso;
     private string $especialidad;
 
-    public function __construct(int $id, string $e_mail, string $nombres, string $apellidos, string $género, string $tipo_doc,  string $num_id_profesor, int $escalafon,  string $fecha_ingreso, string $especialidad)
+    public function __construct(int $id, string $e_mail, string $nombres, string $apellidos, string $gen, string $tipo_doc,  string $num_id_profesor, int $escalafon,  string $fecha_ingreso, string $especialidad)
     {
         if (!strtotime($fecha_ingreso)) {
             throw new InvalidArgumentException("Formato de fecha inválido: $fecha_ingreso");
         }
     
-        parent::__construct($e_mail, '', 'profesor', $id, $nombres, $apellidos, $género);
+        parent::__construct($id, $e_mail, '', 'profesor', $nombres, $apellidos, $gen);
         $this->tipo_doc = $tipo_doc;
         $this->num_id_profesor = $num_id_profesor;
         $this->escalafon = $escalafon;
@@ -42,7 +42,7 @@ class Profesor extends Usuario
             $stmt = $conexion->prepare($query);
             $stmt->execute([':num_id_profesor' => $this->num_id_profesor]);
 
-            if ($stmt->fetchColumn() > 0) {
+            if ((int)$stmt->fetchColumn() > 0) {
                 throw new Exception("El profesor con ID {$this->num_id_profesor} ya existe.");
             }
 
